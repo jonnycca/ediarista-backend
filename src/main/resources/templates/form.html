@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Form de diarista</title>
+</head>
+<body>
+    <h1>Cadastro de diaristas</h1>
+
+    <form action="" method="post" th:object="${form}">
+        <label for="">Nome:</label>
+        <input type="text" th:field="*{nome}" ><br>
+
+        <label for="">Telefone:</label>
+        <input type="text" th:field="*{telefone}"><br>
+
+        <label for="">CPF:</label>
+        <input type="text" th:field="*{cpf}"><br>
+
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
