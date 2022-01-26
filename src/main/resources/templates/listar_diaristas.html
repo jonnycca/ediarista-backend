@@ -1,31 +1,29 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="pt-br">
-<head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>EDiarista</title>
-</head>
+<!DOCTYPE html>
+<html th:replace="~{base :: layout (~{::main})}">
 <body>
-    <h1>Listagem de diaristas</h1>
+    <main>
+        <h1>Lista de diaristas</h1>
 
-    <table>
-        <thead>
-        <tr>
-            <th>#</th>
-            <th>Nome</th>
-            <th>Telefone</th>
-            <th>Endereço</th>
-        </tr>
-        </thead>
-        <tbody>
-            <tr th:each="diarista : ${diaristas}">
-                <td th:text="${diarista.id}"></td>
-                <td>
-                    <a th:href="@{/diaristas/{id} (id=${diarista.id})}" th:text="${diarista.nome}"></a>
-                </td>
-                <td th:text="${diarista.telefone}"></td>
-                <td th:text="${diarista.endereco}"></td>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Endereço</th>
             </tr>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <tr th:each="diarista : ${diaristas}">
+                    <td th:text="${diarista.id}"></td>
+                    <td>
+                        <a th:href="@{/diaristas/{id} (id=${diarista.id})}" th:text="${diarista.nome}"></a>
+                    </td>
+                    <td th:text="${diarista.telefone}"></td>
+                    <td th:text="${diarista.endereco}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 </body>
 </html>
