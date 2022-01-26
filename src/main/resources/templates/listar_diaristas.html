@@ -19,7 +19,9 @@
         <tbody>
             <tr th:each="diarista : ${diaristas}">
                 <td th:text="${diarista.id}"></td>
-                <td th:text="${diarista.nome}"></td>
+                <td>
+                    <a th:href="@{/diaristas/{id} (id=${diarista.id})}" th:text="${diarista.nome}"></a>
+                </td>
                 <td th:text="${diarista.telefone}"></td>
                 <td th:text="${diarista.endereco}"></td>
             </tr>
