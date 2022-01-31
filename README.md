@@ -1,2 +1,2 @@
 # ediarista-backend
-Projeto Ediarista do curso MultiStack da TreinaWeb
+Projeto Ediarista para aprendizado no curso multi-stack da treinaweb
